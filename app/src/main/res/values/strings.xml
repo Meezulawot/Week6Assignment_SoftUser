@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SoftUser</string>
+    <string name="title_activity_bottom">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_student">Add Student</string>
+    <string name="title_aboutus">AboutUs</string>
 </resources>
