@@ -4,7 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.meezu.myapplication.model.Student
@@ -23,6 +25,7 @@ class StudentAdapter(
         val tvAge: TextView
         val tvGender: TextView
         val tvAddress: TextView
+        val imgDelete: ImageView
 
         init {
             imgProfile = view.findViewById(R.id.imgProfile)
@@ -30,6 +33,7 @@ class StudentAdapter(
             tvAge = view.findViewById(R.id.tvAge)
             tvGender = view.findViewById(R.id.tvGender)
             tvAddress = view.findViewById(R.id.tvAddress)
+            imgDelete = view.findViewById(R.id.imgDelete)
         }
     }
 
@@ -49,6 +53,17 @@ class StudentAdapter(
         Glide.with(context!!)
             .load(students.profile)
             .into(holder.imgProfile)
+
+        //setting click listener to recycler view's item
+        holder.imgProfile.setOnClickListener {
+            Toast.makeText(context, "${students.fullName} is clicked", Toast.LENGTH_SHORT).show()
+        }
+
+        holder.imgDelete.setOnClickListener {
+            studentList.removeAt(position)
+            notifyDataSetChanged()
+        }
+
     }
 
     override fun getItemCount(): Int {

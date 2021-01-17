@@ -11,7 +11,7 @@
         android:id="@+id/imgLogo"
         android:layout_width="match_parent"
         android:layout_height="47dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="180dp"
         android:src="@drawable/logo"/>
 
     <LinearLayout
@@ -19,29 +19,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@+id/imgLogo">
 
-        <EditText
-            android:id="@+id/etUsername"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
-            android:padding="16dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-        <EditText
-            android:id="@+id/etPassword"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:hint="Username" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="16dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="15dp"/>
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/btnLogIn"
             android:layout_width="match_parent"
@@ -50,9 +60,7 @@
             android:background="@drawable/button"
             android:text="LogIn"
             android:textSize="16sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="35dp"/>
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
 
 </RelativeLayout>

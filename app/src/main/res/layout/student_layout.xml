@@ -15,8 +15,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgProfile"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_margin="10dp"
             android:src="@drawable/noimg"/>
 
@@ -27,9 +27,9 @@
             android:orientation="vertical"
             android:layout_toEndOf="@+id/imgProfile"
             android:layout_toRightOf="@+id/imgProfile"
-            android:layout_marginTop="18dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
             <TextView
                 android:id="@+id/tvFullname"
@@ -46,7 +46,7 @@
                 android:text="Age"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
             <TextView
                 android:id="@+id/tvGender"
                 android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                 android:text="Gender"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
             <TextView
                 android:id="@+id/tvAddress"
                 android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                 android:text="Address"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
 
         </LinearLayout>
 
@@ -75,6 +75,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
             android:layout_marginRight="5dp"/>
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
